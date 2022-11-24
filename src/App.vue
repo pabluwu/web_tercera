@@ -1,10 +1,11 @@
 <template>
-  <nav>
+  <nav v-if="!['login', 'register', 'help'].includes($route.name)">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </nav>
   <router-view/>
 </template>
+
 
 <style lang="scss">
 #app {
